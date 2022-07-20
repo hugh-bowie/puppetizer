@@ -13,7 +13,7 @@ function log(data) {
 	let date = new Date();
 	let t = date.toLocaleTimeString(); // 2:22:09 PM
 	let d = date.toLocaleDateString(); // 01/03/1984	
-	fs.appendFile('K:/My Drive/log.txt', `${data} Date: ${d}@${t}\n`, () => {
+	fs.appendFile('../log.txt', `${data} Date: ${d}@${t}\n`, () => {
 		console.log(`${data} @${t}`);
 	});
 }
@@ -56,8 +56,6 @@ const hCookie = {
 
 // Accounts not to engage
 const badAccounts = ['https://www.instagram.com/hb.iv', 'https://www.instagram.com/hb.vi'];
-
-
 
 
 module.exports = { iPhone13, r, log, badAccounts, r15, r23, hCookie, desktop }; //timeNow,timeFin,
