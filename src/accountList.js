@@ -4,6 +4,7 @@ const fs = require('fs');
 const Accounts = [
 
 	////////////POPULAR BOCA & DELRAY ACCOUNTS TO ENGAGE FOLLOWERS OF
+
 	'https://www.instagram.com/downtowndelray/',
 	'https://www.instagram.com/visit_delray_beach/',
 	'https://www.instagram.com/visitbocaraton/',
@@ -28,62 +29,7 @@ const Accounts = [
 	'https://www.instagram.com/bocaratonobserver/',
 	'https://www.instagram.com/delraybeachgolfclub/',
 	'https://www.instagram.com/sundy_house/',
-
-	// The Office
-	/*'https://www.instagram.com/aus_shepherd_gram/',
-	'https://www.instagram.com/dwightsdiary/',
-	'https://www.instagram.com/thefemalehustlers/',
-	'https://www.instagram.com/psphotofilms/',
-	'https://www.instagram.com/sunfest/',
-	'https://www.instagram.com/realdepressionproject/',
-	'https://www.instagram.com/glossy_zodiac',
-	'https://www.instagram.com/memestheoffice/',
-	'https://www.instagram.com/glossy_zodiac',
-	'https://www.instagram.com/jimhalpert/',
-	'https://www.instagram.com/tobyflendersson/',
-	'https://www.instagram.com/dwightchrute/',
-	'https://www.instagram.com/theoffices/',
-	'https://www.instagram.com/glossy_zodiac',
-	'https://www.instagram.com/glossy_zodiac',
-	'https://www.instagram.com/stevecarrelll/',
-	'https://www.instagram.com/dwightschrutemoments/',
-	'https://www.instagram.com/theofficeisthebestshowever/',
-	'https://www.instagram.com/glossy_zodiac',
-	'https://www.instagram.com/theofficeismycrack/',
-	'https://www.instagram.com/glossy_zodiac',
-	'https://www.instagram.com/theofficememers/',
-	'https://www.instagram.com/dwightschrutee/',
-	'https://www.instagram.com/glossy_zodiac',
-	'https://www.instagram.com/dunder_mifflin.munder_difflin/',
-	'https://www.instagram.com/dundermifflinpaperco/',
-	'https://www.instagram.com/dundermifflintattoos/',
-	'https://www.instagram.com/JimHalpirt/',
-	'https://www.instagram.com/michaelsmanymoods/',
-	'https://www.instagram.com/glossy_zodiac',
-	'https://www.instagram.com/office.obsession/',
-	'https://www.instagram.com/officephotos/',
-	'https://www.instagram.com/officethememes/',
-	'https://www.instagram.com/glossy_zodiac',
-	'https://www.instagram.com/pambeesle/',
-	'https://www.instagram.com/the.office.alliance/',*/
-
-	// Meme pages
-	/*'https://www.instagram.com/memetheme1/',
-	'https://www.instagram.com/queen.catto/',
-	'https://www.instagram.com/savage_memes_only/',
-	'https://www.instagram.com/tequilashots/',
-	'https://www.instagram.com/textpostgiant/',
-	'https://www.instagram.com/phatmemer/',
-	'https://www.instagram.com/insta.single/',
-	'https://www.instagram.com/ratingthememe/',
-	'https://www.instagram.com/tumblermemes/',
-	'https://www.instagram.com/wholesometroll/',
-	'https://www.instagram.com/worstigaccount/',
-	'https://www.instagram.com/glossy_zodiac/',
-	'https://www.instagram.com/cumsee_adulthumor_/',
-	'https://www.instagram.com/lawofattractionworld/',
-	'https://www.instagram.com/womenwholovewine/',
-	'https://www.instagram.com/staysaltyflorida/',*/
+	'https://www.instagram.com/aus_shepherd_gram/',
 
 ];
 

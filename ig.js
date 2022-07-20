@@ -4,7 +4,7 @@ const puppeteer = require('puppeteer-extra');
 const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 puppeteer.use(StealthPlugin());
 const { r, log, iPhone13, badAccounts, r15, r23 } = require('./src/helpers');
-const { memeAccounts } = require('./src/accountList.js');
+const { Accounts } = require('./src/accountList.js');
 
 
 (async () => {
@@ -54,7 +54,7 @@ const { memeAccounts } = require('./src/accountList.js');
     log(`\n${user}  Followers: ${flws} Following: ${flwg}`);
 
     //----go to one of the target accounts
-    let farmAccount = await memeAccounts[r(0, memeAccounts.length)];
+    let farmAccount = await Accounts[r(0, Accounts.length)];
     await page.goto(farmAccount, { waitUntil: 'networkidle2' });
     log(`Farming this Acct: ${farmAccount}`);
     await page.keyboard.press('PageDown');
@@ -79,7 +79,7 @@ const { memeAccounts } = require('./src/accountList.js');
       await page.waitForSelector('h1', { visible: true });
     }
 
-    //---- get all them likers
+    //---- get all the likers with public accounts and active stories
     let likesH1 = await page.$x('//h1[contains(text(), "Likes")]');
     if (likesH1) {
       //----pagedown 20 times = 90 followers
