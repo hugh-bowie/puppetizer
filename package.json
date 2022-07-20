@@ -1,0 +1,36 @@
+{
+  "name": "puppetizer",
+  "version": "1.0.0",
+  "description": "automation demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js",
+    "schedule": "node schedule.js",
+    "start": "node ig.js",
+    "stealth": "node stealth.js",
+    "update": "npm install dotenv fs-extra puppeteer puppeteer-extra puppeteer-extra-plugin-stealth",
+    "push": "git add . && git commit -m 'auto-push' && git push origin main"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hugh-bowie/puppetizer.git"
+  },
+  "keywords": [
+    "puppeteer",
+    "puppetizer"
+  ],
+  "author": "hb.iv",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hugh-bowie/puppetizer/issues"
+  },
+  "homepage": "https://github.com/hugh-bowie/puppetizer#readme",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "fs-extra": "^10.1.0",
+    "node-schedule": "^2.1.0",
+    "puppeteer": "^15.4.0",
+    "puppeteer-extra": "^3.3.4",
+    "puppeteer-extra-plugin-stealth": "^2.11.0"
+  }
+}
