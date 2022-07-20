@@ -47,7 +47,8 @@ const { Accounts } = require('./src/accountList.js');
     }
 
     //---- got to home and screenshot the follower count
-    await page.goto('https://www.instagram.com/' + process.env.DKS, { waitUntil: 'networkidle2' });
+    await page.goto('https://www.instagram.com/' + process.env.HB, { waitUntil: 'networkidle0' });
+    await page.waitForTimeout(500);
     const user = await page.$eval('h1', use => use.innerText);
     const flws = await page.$$eval('a[href$="/followers/"]', flw => flw.map(fl => fl.children[0].innerText.replace(`\nfollowers`, ``)));
     const flwg = await page.$$eval('a[href$="/following/"]', flg => flg.map(fg => fg.children[0].innerText.replace(`\nfollowers`, ``)));
