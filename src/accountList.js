@@ -5,7 +5,7 @@ const Accounts = [
 
 	////////////AUSSIE SHEPS
 	'https://www.instagram.com/myfavaussie/',
-	'https://www.instagram.com/canilsantamariapet/',
+	//'https://www.instagram.com/canilsantamariapet/',
 
 ];
 
