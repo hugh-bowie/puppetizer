@@ -4,9 +4,10 @@ const fs = require('fs');
 const Accounts = [
 
 	////////////AUSSIE SHEPS
+	'https://www.instagram.com/dwightsdiary/',
 	//'https://www.instagram.com/myfavaussie/',
 	//'https://www.instagram.com/canilsantamariapet/',
-	'https://www.instagram.com/glossy_zodiac',
+	//'https://www.instagram.com/glossy_zodiac',
 
 ];
 

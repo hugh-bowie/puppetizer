@@ -11,7 +11,7 @@ const { Accounts } = require('./src/accountList.js');
   try {
 
     //----initialize
-    const browser = await puppeteer.launch({ headless: false, args: [`--incognito`] });
+    const browser = await puppeteer.launch({ headless: false, args: [`--incognito `] });
     const page = await browser.newPage();
     await page.emulate(device);
 
@@ -20,7 +20,7 @@ const { Accounts } = require('./src/accountList.js');
 
     await page.waitForSelector("input[name='username']", { visible: true });
     await page.tap("input[name='username']");
-    await page.type("input[name='username']", process.env.DKS, { delay: r(50, 100) });
+    await page.type("input[name='username']", process.env.HB, { delay: r(50, 100) });
     await page.type("input[name='password']", process.env.PW, { delay: r(50, 100) });
     await Promise.all([page.waitForNavigation({ waitUntil: 'networkidle2' }), page.tap("[type='submit']")]);
     await page.waitForTimeout(r15);
@@ -47,7 +47,7 @@ const { Accounts } = require('./src/accountList.js');
     }
 
     //---- got to home and screenshot the follower count
-    await page.goto('https://www.instagram.com/' + process.env.DKS, { waitUntil: 'networkidle0' });
+    await page.goto('https://www.instagram.com/' + process.env.HB, { waitUntil: 'networkidle0' });
     await page.waitForTimeout(500);
     const user = await page.$eval('h1', use => use.innerText);
     const flws = await page.$$eval('a[href$="/followers/"]', flw => flw.map(fl => fl.children[0].innerText.replace(`\nfollowers`, ``)));
@@ -95,7 +95,7 @@ const { Accounts } = require('./src/accountList.js');
     log(`Array of ${publicHrefs.length} active users created`);
     await page.waitForTimeout(r15);
     //--- loop over each profile [y]-timeslet rNum = r(); 
-    let rNum = r(3, 5);//  ♻♻♻♻♻♻♻♻♻♻♻♻♻♻♻♻♻♻♻♻♻♻♻♻♻
+    let rNum = r(9, 11);//  ♻♻♻♻♻♻♻♻♻♻♻♻♻♻♻♻♻♻♻♻♻♻♻♻♻
     log(`Engaging ${rNum} users this round`);
     if (publicHrefs) {
       for (let x = 0; x < rNum; x++) {
