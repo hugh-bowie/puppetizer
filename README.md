@@ -19,4 +19,8 @@ To avoid instagrams robust bot-detection the script uses the [puppeteer-extra-pl
 
 ![ig.js](/assets/ig-demo.gif)
 
+---
+
+![Realtor Page soldby.jared](/assets/soldby.jared.gif)
+
 
