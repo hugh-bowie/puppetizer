@@ -2,7 +2,7 @@
   "name": "puppetizer",
   "version": "1.0.0",
   "description": "automation demo",
-  "main": "index.js",
+  "main": "ig.js",
   "scripts": {
     "test": "node test.js",
     "schedule": "node schedule.js",

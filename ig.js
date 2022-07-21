@@ -3,7 +3,7 @@ const fs = require('fs');
 const puppeteer = require('puppeteer-extra');
 const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 puppeteer.use(StealthPlugin());
-const { r, log, iPhone13, badAccounts, r15, r23 } = require('./src/helpers');
+const { r, log, device, badAccounts, r15, r23 } = require('./src/helpers');
 const { Accounts } = require('./src/accountList.js');
 
 
@@ -11,16 +11,16 @@ const { Accounts } = require('./src/accountList.js');
   try {
 
     //----initialize
-    const browser = await puppeteer.launch({ headless: false, args: [`--incognito --window-position = 1,1`] });
+    const browser = await puppeteer.launch({ headless: false, args: [`--incognito`] });
     const page = await browser.newPage();
-    await page.emulate(iPhone13);
+    await page.emulate(device);
 
     //----login
     await page.goto('https://www.instagram.com/accounts/login/?source=auth_switcher', { waitUntil: 'networkidle2' });
 
     await page.waitForSelector("input[name='username']", { visible: true });
     await page.tap("input[name='username']");
-    await page.type("input[name='username']", process.env.HB, { delay: r(50, 100) });
+    await page.type("input[name='username']", process.env.DKS, { delay: r(50, 100) });
     await page.type("input[name='password']", process.env.PW, { delay: r(50, 100) });
     await Promise.all([page.waitForNavigation({ waitUntil: 'networkidle2' }), page.tap("[type='submit']")]);
     await page.waitForTimeout(r15);
@@ -47,7 +47,7 @@ const { Accounts } = require('./src/accountList.js');
     }
 
     //---- got to home and screenshot the follower count
-    await page.goto('https://www.instagram.com/' + process.env.HB, { waitUntil: 'networkidle0' });
+    await page.goto('https://www.instagram.com/' + process.env.DKS, { waitUntil: 'networkidle0' });
     await page.waitForTimeout(500);
     const user = await page.$eval('h1', use => use.innerText);
     const flws = await page.$$eval('a[href$="/followers/"]', flw => flw.map(fl => fl.children[0].innerText.replace(`\nfollowers`, ``)));
