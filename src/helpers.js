@@ -18,6 +18,16 @@ function log(data) {
 	});
 }
 
+//Function that logs timeStamp + data + \n
+function logG(data) {
+	let date = new Date();
+	let t = date.toLocaleTimeString(); // 2:22:09 PM
+	//let d = date.toLocaleDateString(); // 01/03/1984	
+	fs.appendFile('glab.txt', `${data} @${t}\n`, () => {
+		console.log(`${data} @${t}`);
+	});
+}
+
 
 
 
@@ -58,4 +68,4 @@ const hCookie = {
 const badAccounts = ['https://www.instagram.com/hb.iv', 'https://www.instagram.com/hb.vi'];
 
 
-module.exports = { device, r, log, badAccounts, r15, r23, hCookie, desktop }; //timeNow,timeFin,
+module.exports = { device, r, log, logG, badAccounts, r15, r23, hCookie, desktop }; //timeNow,timeFin,
