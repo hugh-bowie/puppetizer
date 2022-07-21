@@ -12,8 +12,8 @@ function r(min, max) {
 function log(data) {
 	let date = new Date();
 	let t = date.toLocaleTimeString(); // 2:22:09 PM
-	let d = date.toLocaleDateString(); // 01/03/1984	
-	fs.appendFile('/log.txt', `${data} Date: ${d}@${t}\n`, () => {
+	//let d = date.toLocaleDateString(); // 01/03/1984	
+	fs.appendFile('log.txt', `${data} @${t}\n`, () => {
 		console.log(`${data} @${t}`);
 	});
 }
