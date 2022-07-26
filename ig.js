@@ -20,7 +20,7 @@ const { Accounts } = require('./src/accountList.js');
 
     await page.waitForSelector("input[name='username']", { visible: true });
     await page.tap("input[name='username']");
-    await page.type("input[name='username']", process.env.HB, { delay: r(50, 100) });
+    await page.type("input[name='username']", process.env.USERNAME, { delay: r(50, 100) });
     await page.type("input[name='password']", process.env.PW, { delay: r(50, 100) });
     await Promise.all([page.waitForNavigation({ waitUntil: 'networkidle2' }), page.tap("[type='submit']")]);
     await page.waitForTimeout(r15);
